@@ -1,0 +1,1 @@
+[12-Dec-2012 14:01:35] WordPress database error Unknown column 'content' in 'field list' for query UPDATE wp_qrd_interceptorp SET ID = '1' ,content = ''  WHERE ID = '1' made by QodyDataType->SavePost, QodyDataType->wp_insert_post, qodyHelper_FrameworkDatabase->UpdateDatabase

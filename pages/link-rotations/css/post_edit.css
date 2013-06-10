@@ -1,0 +1,11 @@
+.chzn-select {
+	width:400px;
+}
+.trigger_list {
+	margin-bottom:5px;
+}
+.trigger_list li {
+	font-size:12px;
+	line-height:16px;
+	margin:0px;
+}
