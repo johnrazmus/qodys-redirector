@@ -13,8 +13,8 @@ $doc_url = $_GET['doc_url'] ? $_GET['doc_url'] : 'http://docs.qody.co/plugins/sp
 	
 	<?php $this->Helper('postman')->DisplayMessages(); ?>
 	
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="row-fluid" style="height:100%;">
+		<div class="span12" style="height:100%;">
 			
 			<iframe src="<?php echo $doc_url; ?>" style="height:80%; width:100%; border:none;"></iframe>
 			
