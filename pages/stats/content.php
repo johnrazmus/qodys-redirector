@@ -88,7 +88,6 @@ td.link_small {
 		<div id="poststuff" class="metabox-holder has-right-sidebar">			
 			<div id="side-info-column" class="inner-sidebar">
 				
-				<img style="width:180px;" class="owl_sidebar" src="<?php echo $this->GetRandomOwlImage( 5 ); ?>" />
 				<?php $this->do_meta_boxes( 'side' ); ?>
 			</div>
 			<div id="post-body" class="has-sidebar">
