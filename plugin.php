@@ -3,7 +3,7 @@
  * Plugin Name: Qody's Redirector
  * Plugin URI: http://qody.co
  * Description: Powerful redirection plugin for WordPress.
- * Version: 4.1.6
+ * Version: 4.1.7
  * Author: Qody LLC
  * Author URI: http://qody.co
  *
