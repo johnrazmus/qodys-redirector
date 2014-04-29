@@ -51,7 +51,7 @@ if( !file_exists( $framework_file ) )
 }
 
 $fields = array();
-$fields['qodys-owlnest'] = '3.6.6';
+$fields['qodys-owlnest'] = '4.0.0';
 
 foreach( $fields as $key => $value )
 {
