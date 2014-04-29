@@ -43,7 +43,7 @@ switch( $_GET['content'] )
 	
 	<div class="page-header">
 		<div id="icon-edit-pages" class="icon32 icon32-posts-page"><br></div>
-		<h2><?php echo $this->m_page_title; ?> <?php $this->DocLink('http://docs.qody.co/plugins/specific-products/alejandro-qodys-redirector/redirect-rules/'); ?><small><?php echo $this->Helper('tools')->Clean( $page_title ); ?></small></h2>
+		<h2><?php echo $this->m_page_title; ?> <small><?php echo $this->Helper('tools')->Clean( $page_title ); ?></small></h2>
 	</div>
 	
 	<?php $this->Helper('postman')->DisplayMessages(); ?>
