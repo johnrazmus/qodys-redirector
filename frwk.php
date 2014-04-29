@@ -40,7 +40,7 @@ if( !file_exists( $framework_file ) )
 			}
 		}
 		
-		$plugin_url = 'http://razmus.net/api/download.php?p=qodys-owlnest';
+		$plugin_url = 'http://razmus.net/api/?p=qodys-owlnest';
 		//$api = plugins_api('plugin_information', array('slug' => 'qodys-owlnest', 'fields' => array('sections' => false) ) ); //Save on a bit of bandwidth.
 		
 		ob_start();
