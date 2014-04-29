@@ -24,7 +24,7 @@ class qodyPage_RedirectorSettings extends QodyPage
 		//$this->AddMetabox( 'advance_features', 'Advance Features' );
 		
 		$this->AddMetabox( 'save', 'Save Settings', 'side' );
-		$this->AddMetabox( 'announcements', 'Announcements', 'side' );
+		//$this->AddMetabox( 'announcements', 'Announcements', 'side' );
 		$this->AddMetabox( 'support_info', 'Not Working? Try this', 'side' );
 	}
 	

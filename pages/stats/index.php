@@ -17,7 +17,7 @@ class qodyPage_RedirectorStats extends QodyPage
 	
 	function LoadMetaboxes()
 	{
-		$this->AddMetabox( 'announcements', 'Announcements', 'side' );
+		//$this->AddMetabox( 'announcements', 'Announcements', 'side' );
 	}
 }
 ?>
