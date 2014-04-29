@@ -140,11 +140,11 @@ $custom['alert_cancel_action'] = $custom['alert_cancel_action'] ? $custom['alert
 		
 		<?php $nextItem = 'category_triggers'; ?>
 		<?php $nextValue = is_array( $custom[ $nextItem ] ) ? $custom[ $nextItem ] : array(); ?>
-		<div class="control-group <?php $this->NexusMemberRequired('class'); ?>">
+		<div class="control-group">
 			<label class="control-label" for="<?php echo $nextItem; ?>">Categories</label>
 			<div class="controls">
 				
-				<select name="field_<?php echo $nextItem; ?>[]" class="chzn-select" <?php $this->NexusMemberRequired(); ?> multiple data-placeholder="Select categories">
+				<select name="field_<?php echo $nextItem; ?>[]" class="chzn-select" multiple data-placeholder="Select categories">
 					<option></option>
 					<option value="all" <?php echo in_array( 'all', $nextValue ) ? 'selected="selected"' : ''; ?>>All Categories</option>
 					
@@ -174,7 +174,7 @@ $custom['alert_cancel_action'] = $custom['alert_cancel_action'] ? $custom['alert
 		<div class="control-group">
 			<label class="control-label" for="<?php echo $nextItem; ?>">Specific URLs</label>
 			<div class="controls">
-				<textarea <?php $this->NexusMemberRequired(); ?> class="span10" style="height:60px;" id="<?php echo $nextItem; ?>" name="field_<?php echo $nextItem; ?>" placeholder="<?php echo get_bloginfo('url'); ?>/about-us/"><?php echo $nextValue; ?></textarea>
+				<textarea class="span10" style="height:60px;" id="<?php echo $nextItem; ?>" name="field_<?php echo $nextItem; ?>" placeholder="<?php echo get_bloginfo('url'); ?>/about-us/"><?php echo $nextValue; ?></textarea>
 				<span class="help-block">Pages matching these URLs will trigger this redirect rule</span>
 				<span class="help-block"><strong>Note:</strong> one per line, or separated by <code>,</code></span>
 			</div>
@@ -196,8 +196,8 @@ $custom['alert_cancel_action'] = $custom['alert_cancel_action'] ? $custom['alert
 					Page loads
 				</label>
 				
-				<label class="radio <?php $this->NexusMemberRequired('class'); ?>">
-					<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '#action_trigger_type_click', '.action_trigger_type' );jQuery('#url_type_clicked_url').slideDown();" <?php echo $nextValue == 'click' ? 'checked="checked"' : ''; ?> value="click">
+				<label class="radio">
+					<input type="radio" name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '#action_trigger_type_click', '.action_trigger_type' );jQuery('#url_type_clicked_url').slideDown();" <?php echo $nextValue == 'click' ? 'checked="checked"' : ''; ?> value="click">
 					Content link clicked
 				</label>
 				
@@ -213,12 +213,12 @@ $custom['alert_cancel_action'] = $custom['alert_cancel_action'] ? $custom['alert
 				<div class="controls">
 					
 					<label class="radio">
-						<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '#click_trigger_rule_specifics', '.click_trigger_link_rules' );" <?php echo $nextValue == 'specific' ? 'checked="checked"' : ''; ?> value="specific">
+						<input type="radio" name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '#click_trigger_rule_specifics', '.click_trigger_link_rules' );" <?php echo $nextValue == 'specific' ? 'checked="checked"' : ''; ?> value="specific">
 						Specific urls - only a few links redirect
 					</label>
 					
 					<label class="radio">
-						<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '#click_trigger_rule_exclusions', '.click_trigger_link_rules' );" <?php echo $nextValue == 'all' ? 'checked="checked"' : ''; ?> value="all">
+						<input type="radio" name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '#click_trigger_rule_exclusions', '.click_trigger_link_rules' );" <?php echo $nextValue == 'all' ? 'checked="checked"' : ''; ?> value="all">
 						All urls - most links redirect
 					</label>
 					
@@ -231,7 +231,7 @@ $custom['alert_cancel_action'] = $custom['alert_cancel_action'] ? $custom['alert
 				<div class="control-group">
 					<label class="control-label" for="<?php echo $nextItem; ?>">Specific Links</label>
 					<div class="controls">
-						<textarea <?php $this->NexusMemberRequired(); ?> class="span10" style="height:60px;" id="<?php echo $nextItem; ?>" name="field_<?php echo $nextItem; ?>" placeholder="/product2/, http://othersite.com"><?php echo $nextValue; ?></textarea>
+						<textarea class="span10" style="height:60px;" id="<?php echo $nextItem; ?>" name="field_<?php echo $nextItem; ?>" placeholder="/product2/, http://othersite.com"><?php echo $nextValue; ?></textarea>
 						<span class="help-block">Only links matching these full/partial urls will be eligable for redirection</span>
 						<span class="help-block"><strong>Note:</strong> one per line, or separated by <code>,</code></span>
 					</div>
@@ -243,7 +243,7 @@ $custom['alert_cancel_action'] = $custom['alert_cancel_action'] ? $custom['alert
 				<div class="control-group">
 					<label class="control-label" for="<?php echo $nextItem; ?>">Link Exclusions<br>(optional)</label>
 					<div class="controls">
-						<textarea <?php $this->NexusMemberRequired(); ?> class="span10" style="height:60px;" id="<?php echo $nextItem; ?>" name="field_<?php echo $nextItem; ?>" placeholder="/product2/, http://othersite.com"><?php echo $nextValue; ?></textarea>
+						<textarea class="span10" style="height:60px;" id="<?php echo $nextItem; ?>" name="field_<?php echo $nextItem; ?>" placeholder="/product2/, http://othersite.com"><?php echo $nextValue; ?></textarea>
 						<span class="help-block">Links matching the urls in this list won't be eligable to trigger a redirect</span>
 						<span class="help-block"><strong>Note:</strong> one per line, or separated by <code>,</code></span>
 					</div>
@@ -276,12 +276,12 @@ $custom['alert_cancel_action'] = $custom['alert_cancel_action'] ? $custom['alert
 					<input type="radio" name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '#url_type_single', '.url_type_options' );" <?php echo $nextValue == 'url' ? 'checked="checked"' : ''; ?> value="url">
 					Custom url destination
 				</label>
-				<label class="radio <?php $this->NexusMemberRequired('class'); ?>">
-					<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '#url_type_rotation', '.url_type_options' );" <?php echo $nextValue == 'rotation' ? 'checked="checked"' : ''; ?> value="rotation">
+				<label class="radio">
+					<input type="radio" name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '#url_type_rotation', '.url_type_options' );" <?php echo $nextValue == 'rotation' ? 'checked="checked"' : ''; ?> value="rotation">
 					Link Rotation
 				</label>
-				<label class="radio <?php $this->NexusMemberRequired('class'); ?>" id="url_type_clicked_url">
-					<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '', '.url_type_options' );" <?php echo $nextValue == 'clicked_url' ? 'checked="checked"' : ''; ?> value="clicked_url">
+				<label class="radio" id="url_type_clicked_url">
+					<input type="radio" name="field_<?php echo $nextItem; ?>" onclick="CustomGroupToggle( '', '.url_type_options' );" <?php echo $nextValue == 'clicked_url' ? 'checked="checked"' : ''; ?> value="clicked_url">
 					Clicked link url destination
 				</label>
 				
@@ -336,11 +336,11 @@ $custom['alert_cancel_action'] = $custom['alert_cancel_action'] ? $custom['alert
 		
 		<?php $nextItem = 'interception_page'; ?>
 		<?php $nextValue = $custom[ $nextItem ]; ?>
-		<div class="control-group <?php $this->NexusMemberRequired('class'); ?>">
+		<div class="control-group">
 			<label class="control-label" for="<?php echo $nextItem; ?>">Interception<br>(optional) <?php $this->DocLink('http://docs.qody.co/plugins/specific-products/alejandro-qodys-redirector/redirect-rules/actions/interception/'); ?></label>
 			<div class="controls">
 				
-				<select <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" class="chzn-select" data-placeholder="Select a page">
+				<select name="field_<?php echo $nextItem; ?>" class="chzn-select" data-placeholder="Select a page">
 					<option></option>
 					
 					<?php
@@ -373,24 +373,24 @@ $custom['alert_cancel_action'] = $custom['alert_cancel_action'] ? $custom['alert
 					<input type="radio" name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'redirect' ? 'checked="checked"' : ''; ?> value="redirect" onclick="ToggleActionTypeSettings('#action_type_redirect');">
 					Redirect - takes user directly to the destination
 				</label>
-				<label class="radio <?php $this->NexusMemberRequired('class'); ?>">
-					<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'modal' ? 'checked="checked"' : ''; ?> value="modal" onclick="ToggleActionTypeSettings('#action_type_modal');">
+				<label class="radio">
+					<input type="radio" name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'modal' ? 'checked="checked"' : ''; ?> value="modal" onclick="ToggleActionTypeSettings('#action_type_modal');">
 					Modal - displays lightbox/modal popup of destination
 				</label>
 				<!--<label class="radio">
 					<input type="radio" name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'tab' ? 'checked="checked"' : ''; ?> value="tab" onclick="ToggleActionTypeSettings('#action_type_tab');">
 					New Tab - opens destination in a new browser tab <span style="color:#cc0000; font-weight:bold;">*</span>
 				</label>-->
-				<label class="radio <?php $this->NexusMemberRequired('class'); ?>">
-					<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'popup' ? 'checked="checked"' : ''; ?> value="popup" onclick="ToggleActionTypeSettings('#action_type_popup');">
+				<label class="radio">
+					<input type="radio" name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'popup' ? 'checked="checked"' : ''; ?> value="popup" onclick="ToggleActionTypeSettings('#action_type_popup');">
 					Popup - opens popup in front of browser window <span style="color:#cc0000; font-weight:bold;">*</span>
 				</label>
-				<label class="radio <?php $this->NexusMemberRequired('class'); ?>">
-					<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'popunder' ? 'checked="checked"' : ''; ?> value="popunder" onclick="ToggleActionTypeSettings('#action_type_popunder');">
+				<label class="radio">
+					<input type="radio" name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'popunder' ? 'checked="checked"' : ''; ?> value="popunder" onclick="ToggleActionTypeSettings('#action_type_popunder');">
 					Popunder - opens popup behind browser window <span style="color:#cc0000; font-weight:bold;">*</span>
 				</label>
-				<label class="radio <?php $this->NexusMemberRequired('class'); ?>">
-					<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'alert' ? 'checked="checked"' : ''; ?> value="alert" onclick="ToggleActionTypeSettings('#action_type_alert');">
+				<label class="radio">
+					<input type="radio" name="field_<?php echo $nextItem; ?>" <?php echo $nextValue == 'alert' ? 'checked="checked"' : ''; ?> value="alert" onclick="ToggleActionTypeSettings('#action_type_alert');">
 					Alert Prompt - "are you sure you want to leave?" Ok/Cancel box
 				</label>
 				<span class="help-block"><strong>Note:</strong> actions marked with <span style="color:#cc0000; font-weight:bold;">*</span> get blocked by modern popup blockers when <strong>not</strong> triggered from the <code>content link clicked</code> Action Trigger</span>

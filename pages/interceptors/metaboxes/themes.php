@@ -8,7 +8,7 @@ $themes = $this->GetThemes();
 			
 <?php $nextItem = 'interceptor_theme'; ?>
 <?php $nextValue = $custom[ $nextItem ]; ?>
-<div class="control-group <?php $this->NexusMemberRequired('class'); ?>">
+<div class="control-group">
 
 	<div class="controls" style="margin-left:0px;">
 		
@@ -24,7 +24,7 @@ $themes = $this->GetThemes();
 			else
 				$selected = ''; ?>
 		<label class="radio">
-			<input type="radio" <?php $this->NexusMemberRequired(); ?> name="field_<?php echo $nextItem; ?>" onclick="ToggleThemeSpecificSettings( '#theme_<?php echo $value; ?>' );" <?php echo $selected; ?> value="<?php echo $value; ?>">
+			<input type="radio" name="field_<?php echo $nextItem; ?>" onclick="ToggleThemeSpecificSettings( '#theme_<?php echo $value; ?>' );" <?php echo $selected; ?> value="<?php echo $value; ?>">
 			<?php echo $this->Helper('tools')->GetFromSlug($value); ?>
 		</label>
 		<?php
