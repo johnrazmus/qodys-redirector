@@ -32,7 +32,7 @@ switch( $_GET['content'] )
 	
 	default:
 	
-		$page_title = '<a '.$this->NexusMemberRequired('',false).' href="'.$this->NexusMemberLinkFilter( $this->AdminUrl( array( 'content' => 'add' ) ), false ).'" class="button add-new-h2 '.$this->NexusMemberRequired('class',false).'">Add new</a>';
+		$page_title = '<a href="'.$this->AdminUrl( array( 'content' => 'add' ) ).'" class="button add-new-h2">Add new</a>';
 		$content_include = $this->GetAsset( 'content', 'list', 'dir' );
 		
 		break;
